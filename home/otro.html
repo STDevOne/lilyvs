@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p:first-child {
+        color: pink;
+    }
+    p:last-child {
+        color:blue;
+    }
+    p:nth-child(2n) {
+        /* 
+           p:pseudo-clases Pintando únicamente los pares <p> de una lista.
+           2xn
+           2x0=0
+           2x1=2
+           2x2=4  
+        */
+        color: red;
+    }
+    p:nth-child(2n+1) {
+        /* 
+           Pintando únicamente los impares <p> de una lista.
+        */
+        color: green;
+    }
+    p::first-letter {
+        color: chartreuse;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <p>Conejo 🐰</p>
+    <p>Perro 🐕</p>
+    <p>Vaca 🐄</p>
+    <p>Sapo 🐸</p>
+    <p>Gato 🐈</p>
+</body>
+</html>
