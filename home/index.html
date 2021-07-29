@@ -11,41 +11,87 @@
     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lilyvaladez.com</title>
-    <link rel="stylesheet" href="index.css">
+<!--    <link rel="stylesheet" href="index.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
 </head>
 <style>
     body {
         margin: 0px;
+        background-color: lavender;
+        font-family: 'Mulish', sans-serif;
     }
-    header {
+    .header {
         background-color: #c899bd;
         width: 100%; /* Medida relativa, dependiendo del device. va ir de inicio a fin. */
         height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    header img {
+    .header__img {
         width: 80px;
         margin: 10px;
     }
-    header nav {
+    .header__menu {
+        margin-right: 30px;
+    }
+    .header__menu--profile {
+        margin-right: 8px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        align-items: center;
+    }
+    .header__menu--profile img {
+        margin-right: 8px;
+        width: 40px;
+    }
+    .header__menu--profile p {
+        margin: 0px;
+        color: darkslateblue;
+    }
+    .header__menu ul {
+        display: none;
+        list-style: none;
+        padding: 0px;
+        position: absolute;
+        width: 100px;
+        text-align: right;
+        margin: 0px 0px 0px -14px;
+    }
+    .header__menu li {
+        margin: 10px 0px;
+    }
+    .header__menu li a {
+        color: darkslateblue;
+        text-decoration: none;
+    }
+    .header__menu li a:hover {
+        text-decoration: underline;
+    }
+    .header__menu:hover ul, ul:hover {
+        display: block;
     }
 </style>
 <body>
-<header>
-    <img alt="lilyvaladezs's profile picture" src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4d458681f01d1e64a21389c3acb507e0~c5_720x720.jpeg?x-expires=1626415200&amp;x-signature=cHPKNQY8N0Qnj7Fnd9XImd6Q%2FFI%3D">
-    <nav>
-        <a href="#">Moda</a> |
-        <a href="#">Maternidad</a> |
-        <a href="#">Lifestyle</a> |
-    </nav>
+<header class="header">
+    <img class="header__img" alt="lilyvaladezs's profile picture" src="Logo_720x720.jpeg">
+    <div class="header__menu">
+        <div class="header__menu--profile">
+            <img src="icons8-usuario-80.png" alt="Profile">
+            <p>Perfil</p>
+            <ul>
+                <li><a href="/">Cuenta</a></li>
+                <li><a href="/">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </div>
 </header>
 <main>
     <article>
         <h2>Una Frase</h2>
         <section>
-            <h3>Una sección</h3>
+            <h3>¿Que quieres ver hoy?</h3>
         </section>
     </article>
 </main>
