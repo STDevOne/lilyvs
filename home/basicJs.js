@@ -34,4 +34,81 @@ var articulosBaratos = articulos.some(function(articulo)){
 // .push() El método .push() nos permite agregar uno o más elementos al final de un array.
 for(articulo of articulos){
     console.log(articulo);
+}}
+
+const coupons = [
+    "JuanDC_es_Batman",
+    "pero_no_le_digas_a_nadie",
+    "es_un_secreto",
+];
+
+if(coupons.includes("JuanDC_es_Batman")){
+    console.log("entro");
 }
+
+const inventario = [
+    {nombre: 'manzanas', cantidad: 2},
+    {nombre: 'bananas', cantidad: 0},
+    {nombre: 'cerezas', cantidad: 5}
+];
+
+function esCereza(fruta) {
+    return fruta.nombre === 'cerezas';
+}
+
+console.log(inventario.find(esCereza));
+// { nombre: 'cerezas', cantidad: 5 }
+
+[0,1,2,3,4].reduce(function(valorAnterior, valorActual, indice, vector){
+    console.log("vector: " + vector);
+    return valorAnterior + valorActual;
+});
+
+console.log(parseInt(2.5));
+
+[2, 2, 2, 2, 2, 4, 5, 5, 5, 5, 5, 5, 5, 5, 9].sort(function (uno,dos) {
+    console.log(uno + " " + dos);
+});
+
+
+var list = [2, 2, 2, 2, 2, 4, 5, 5, 5, 5, 5, 5, 5, 5, 9].map(function (uno,dos) { //// ordenar
+    console.log(uno + " " + dos);
+});
+
+Object.entries(list); //convertir una lista en un array
+
+const notes = [
+    {
+        course: "Educación Física",
+        note: 10,
+        credit: 2,
+    },
+    {
+        course: "Programación",
+        note: 8,
+        credit: 5,
+    },
+    {
+        course: "Finanzas personales",
+        note: 7,
+        credit: 5,
+    },
+];
+const notesWithCredit = notes.map(function (noteObject) {
+    return noteObject.note * noteObject.credit;
+});
+
+const credits = notes.map(function (noteObject) {
+    return noteObject.credit;
+});
+
+const sumOfCredits = credits.reduce(
+    function (sum = 0, newVal) {
+        return sum + newVal;
+    }
+);
+
+let numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let ultNumSplice = numeros.splice(7, 3);
+
+let ultNumSlice = numeros.slice(7, numeros.length)
